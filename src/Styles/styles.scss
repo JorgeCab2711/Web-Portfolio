@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+$black: #252525;
+$darkpurple: #1d1135;
+$darkBlue: #0c164f;
+$pink: #ba1e68;
+$clearPurple: #5643fd;
+$violet: #7649fe;
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 99vh;
+    background-color: $black;
+    font-family: 'Montserrat', sans-seri;
+}
+
+.overAllContainer{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 5% 25% 70%;
+    
+}
+
