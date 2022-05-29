@@ -1,8 +1,7 @@
 /*Color Palette*/
-$primary: rgb(235, 223, 197);
+$primary: rgb(231, 224, 209);
 $secondary: rgb(233,219,181);
 $shadow: #6b6149;
-
 
 /*End Color Palette*/
 
@@ -101,5 +100,64 @@ $shadow: #6b6149;
 }
 
 
-
 /*End Periferal elements*/
+
+/*Last element*/
+
+
+#last-element{
+    display: grid;
+    place-items: center;
+    grid-template-rows: 40% 60%;
+}
+
+.memory-container{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: 95px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+.memory-outlet{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    background-color: $primary;
+}
+
+#inner-left{
+    position : relative;
+    align-self: center;
+    left: 70%;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+}
+
+#inner-center{
+    position: relative;
+    justify-content: center;
+    align-self: center;
+    height: 30px;
+    width: 100%;
+    background-color: black;
+}
+#inner-right{
+    position : relative;
+    align-self: center;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+}
+
+#empty-outlet{
+    border-top: 2px solid black;
+}
+
+
+
+
+
+
+
+/*Last element end*/

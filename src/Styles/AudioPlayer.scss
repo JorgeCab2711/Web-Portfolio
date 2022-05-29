@@ -1,0 +1,32 @@
+.playNPause{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+
+.boton{
+    height: 30px;
+    width: 30px;
+    border: 2px solid black;
+    border-radius: 100%;
+    overflow: hidden;
+    &:hover img{
+        height: 22px;
+        width: 22px;
+        cursor: pointer;
+        transition: 250ms ease-in-out;
+    }
+    &:hover{
+        height: 32px;
+        width: 32px;
+        cursor: pointer;
+        transition: 250ms ease-in-out;
+    }
+}
+.pnpImage{
+    position : relative;
+    height: 20px;
+    width: 20px;
+    right: 3px;
+}
