@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, {createContext, useState} from 'react';
 import '../Styles/PowerAssets.scss';
 import powerSymbol from "../img/powerSymbol.png";
 import resetSymbol from "../img/resetSymbol.png";
-import PowerContext from './Context/PowerContext';
-
+import { PowerContext } from '../Context/Context';
+import Screen from './Screen';
 
 
 export default function PowerAssets(){
@@ -11,7 +11,7 @@ export default function PowerAssets(){
     const [greenState, setGreenState] = useState('greenLightInactive');
     const [redState, setRedState] = useState('redLightInactive');
     
-
+    
     //Changes the state of the green Light when pressed
     const changeGreenState = () => {
         if (greenState !== 'greenLightActive'){
@@ -38,14 +38,16 @@ export default function PowerAssets(){
         
     }
     
-    
     return (
+        
         <PowerContext.Provider value={{greenState, setGreenState}}>
+            
             <div id='alignment'>
                 <button id='resetButton' className='mainBtn' onClick={changeRedState}  >
                     <img id='rImage' src={resetSymbol}/>
                 </button>
                 <button id='powerButton' className='mainBtn' onClick={changeGreenState}>
+                    Hola
                     <img id='pImage' src={powerSymbol}/>
                 </button>
                 <div className='lightContainer'>
@@ -54,6 +56,8 @@ export default function PowerAssets(){
                 </div>
             </div>
         </PowerContext.Provider>
+      
+       
         
         
     );
