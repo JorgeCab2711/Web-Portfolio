@@ -21,6 +21,7 @@ export default function Computer(){
                                     <img id="headPhones" src={HP}></img>
                                     <div id="aux"></div>
                                 </div>
+                                {/* Ambient music*/}
                                 <AudioPlayer/>
                             </div>
                         </div>
@@ -35,6 +36,7 @@ export default function Computer(){
                                 </div>
                                 <div id='empty-outlet'></div>
                             </div>
+                            {/* Power and Reset Button with respective lights and light efects */}
                             <PowerAssets/>
                             
                         </div>

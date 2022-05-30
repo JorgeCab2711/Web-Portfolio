@@ -1,0 +1,11 @@
+
+.screen{
+    display: grid;
+    height: 89%;
+    width: 90%;
+    place-self: center;
+    place-items: center;
+    border-radius: 5%;
+    box-shadow: inset 10px 10px 50px black;
+    background-color: rgb(26, 26, 26);
+}

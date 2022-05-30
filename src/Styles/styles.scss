@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 
 $black: #252525;
 $darkpurple: #1d1135;
@@ -13,7 +14,9 @@ html, body{
     padding: 0;
     height: 99vh;
     background-color: $black;
-    font-family: 'Montserrat', sans-seri;
+    font-family: 'VT323', monospace;
+    color: green;
+    font-size: 20px;
 }
 
 .overAllContainer{

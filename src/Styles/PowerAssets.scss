@@ -3,7 +3,7 @@ $classicPurple2: rgb(95, 18, 177);
 $shadow: rgb(189, 177, 147);
 $defaultRed:rgb(141, 0, 0);
 $defautlGreen: green;
-$activeRed: rgb(228, 0, 0);
+$activeRed: rgb(255, 0, 0);
 $activeGreen: rgb(0, 255, 0);
 
 
@@ -33,13 +33,13 @@ $activeGreen: rgb(0, 255, 0);
             height: 42px;
             width: 42px;
             cursor: pointer;
-            transition: 500ms ease-in-out;
+            transition: 250ms ease-in-out;
         }
         &:active{
             height: 40px;
             width: 40px;
             background-color: $classicPurple2;
-            transition: 500ms ease-in-out;
+            transition: 250ms ease-in-out;
         }
     }
     &#resetButton{
@@ -49,13 +49,13 @@ $activeGreen: rgb(0, 255, 0);
             height: 35px;
             width: 35px;
             cursor: pointer;
-            transition: 500ms ease-in-out;
+            transition: 250ms ease-in-out;
         }
         &:active{
             height: 30px;
             width: 30px;
             background-color: $classicPurple2;
-            transition: 500ms ease-in-out;
+            transition: 250ms ease-in-out;
 
         }
     }
@@ -85,11 +85,24 @@ $activeGreen: rgb(0, 255, 0);
     background-color: $defautlGreen;
 }
 
+#greenLightActive{
+    position : relative;
+    left: 10px;
+    background-color: $activeGreen;
+}
+
 #redLightInactive{
     position : relative;
     left: 10px;
     top: 25px;
     background-color: $defaultRed;
+}
+
+#redLightActive{
+    position : relative;
+    left: 10px;
+    top: 25px;
+    background-color: $activeRed;
 }
 
 #pImage{
