@@ -1,29 +1,18 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 import '../Styles/PowerAssets.scss';
 import powerSymbol from "../img/powerSymbol.png";
 import resetSymbol from "../img/resetSymbol.png";
-import { PowerContext } from '../Context/Context';
-import Screen from './Screen';
+import { usePower } from '../Context/usePower';
 
 
 export default function PowerAssets(){
     //React hooks for the small Green and Red lights
-    const [greenState, setGreenState] = useState('greenLightInactive');
     const [redState, setRedState] = useState('redLightInactive');
+    const {isGreen, setIsGreen} =usePower();
+    console.log({isGreen});
     
     
-    //Changes the state of the green Light when pressed
-    const changeGreenState = () => {
-        if (greenState !== 'greenLightActive'){
-            setGreenState('greenLightActive');
-           
-        }
-        else{
-            setGreenState('greenLightInactive');
-            
-            
-        }
-    }
+    
 
     //Changes the state of the red Light when pressed awaits 5 seconds and changes to the original state
     const changeRedState = () => {
@@ -33,32 +22,28 @@ export default function PowerAssets(){
                 console.log('waiting');
                 setRedState('redLightInactive');
             }, 5000);
-            
-        }
-        
+        }   
     }
+
+    useEffect(()=>{
+        console.log({isGreen});
+    },[isGreen])
     
     return (
-        
-        <PowerContext.Provider value={{greenState, setGreenState}}>
-            
             <div id='alignment'>
                 <button id='resetButton' className='mainBtn' onClick={changeRedState}  >
                     <img id='rImage' src={resetSymbol}/>
                 </button>
-                <button id='powerButton' className='mainBtn' onClick={changeGreenState}>
-                    Hola
+                <button id='powerButton' className='mainBtn' onClick={() => {
+                    setIsGreen(!isGreen);
+                }}>
+                    
                     <img id='pImage' src={powerSymbol}/>
                 </button>
                 <div className='lightContainer'>
-                    <div className='light' id={greenState} ></div>
+                    <div className='light' style={{backgroundColor: isGreen ? 'rgb(0, 255, 0)': 'green'}} ></div>
                     <div className='light' id={redState}></div>
                 </div>
             </div>
-        </PowerContext.Provider>
-      
-       
-        
-        
     );
 }

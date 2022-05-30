@@ -1,23 +1,21 @@
 import React, { useContext } from 'react';
 import '../Styles/Screen.scss';
-import { PowerContext } from '../Context/Context';
+import { PowerContext, usePower } from '../Context/usePower';
 
 
 
 export default function Screen(){
-    const {greenState, setGreenState} = useContext(PowerContext);
-    console.log('A',greenState)
+    const {isGreen} = usePower();
+    console.log({isGreen})
     
-    if(greenState === 'greenLightActive'){
+    if(isGreen){
         return(
             <div className='screen'>
                 isOn
             </div>
         );
     }
-    else if (greenState == 'greenLightInactive'){
-        return(
-            <div className='screen'>Is Off</div>
-        );
-    }
+    return(
+        <div className='screen'>Is Off</div>
+    );
 }

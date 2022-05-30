@@ -64,6 +64,9 @@ $activeGreen: rgb(0, 255, 0);
 
 
 .lightContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $shadow;
     height: 60px;
     width: 30px;
@@ -71,24 +74,10 @@ $activeGreen: rgb(0, 255, 0);
 }
 
 .light{
-    position: relative;
-    top: 15px;
     height: 6px;
     width: 6px;
     border-radius: 100%;
     border: 2px solid black;
-}
-
-#greenLightInactive{
-    position : relative;
-    left: 10px;
-    background-color: $defautlGreen;
-}
-
-#greenLightActive{
-    position : relative;
-    left: 10px;
-    background-color: $activeGreen;
 }
 
 #redLightInactive{
