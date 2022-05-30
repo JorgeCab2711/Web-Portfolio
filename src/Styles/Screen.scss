@@ -7,5 +7,85 @@
     place-items: center;
     border-radius: 5%;
     box-shadow: inset 10px 10px 50px black;
-    background-color: rgb(26, 26, 26);
+    background-color: black;
+    grid-template-rows: 20% 55% 25%;
+    overflow: hidden;
 }
+
+.first-row{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: 20% 80%;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    background-color: black;
+}
+
+.element{
+    border: 1px dotted green;
+    border-right: none;
+    place-self: center;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+}
+
+.rowBtn{
+    background-color: black;
+    border: 1px dotted green;
+    border-top: none;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+
+#gitButton{
+    grid-row-start: 2;
+}
+
+#linkButton{
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+#discButton{
+    grid-row-start: 2;
+    grid-column-start: 3;
+}
+
+#IgButton{
+    grid-row-start: 2;
+    grid-column-start: 4;
+}
+
+
+.intro{
+    display: grid;
+    place-items: center;
+    width: 380px;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 30px;
+}
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }

@@ -64,9 +64,8 @@ $activeGreen: rgb(0, 255, 0);
 
 
 .lightContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     background-color: $shadow;
     height: 60px;
     width: 30px;
@@ -82,15 +81,11 @@ $activeGreen: rgb(0, 255, 0);
 
 #redLightInactive{
     position : relative;
-    left: 10px;
-    top: 25px;
     background-color: $defaultRed;
 }
 
 #redLightActive{
     position : relative;
-    left: 10px;
-    top: 25px;
     background-color: $activeRed;
 }
 

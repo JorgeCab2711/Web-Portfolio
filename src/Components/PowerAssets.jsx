@@ -21,7 +21,9 @@ export default function PowerAssets(){
             setTimeout(() => {
                 console.log('waiting');
                 setRedState('redLightInactive');
-            }, 5000);
+                window.location.reload();
+            }, 3000);
+            
         }   
     }
 
