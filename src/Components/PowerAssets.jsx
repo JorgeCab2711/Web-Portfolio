@@ -9,7 +9,7 @@ export default function PowerAssets(){
     //React hooks for the small Green and Red lights
     const [redState, setRedState] = useState('redLightInactive');
     const {isGreen, setIsGreen} =usePower();
-    console.log({isGreen});
+    
     
     
     
@@ -27,9 +27,7 @@ export default function PowerAssets(){
         }   
     }
 
-    useEffect(()=>{
-        console.log({isGreen});
-    },[isGreen])
+    
     
     return (
             <div id='alignment'>

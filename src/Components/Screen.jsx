@@ -1,19 +1,31 @@
-import React, { useContext } from 'react';
+import React, {useState} from 'react';
 import '../Styles/Screen.scss';
 import { usePower } from '../Context/usePower';
 import gitHub from '../img/gitLogo.png';
 import linkLogo from '../img/LILogo.png';
 import IG from '../img/IGlogo.png';
 import disc from '../img/discordLogo.png';
+import MyRouter from './myRouter';
+import RenderIntro from './RenderIntro';
+import Calculadora from './Calculadora'
+
+const pagesComponets = {
+    intro:      <RenderIntro/>,
+    calculadora: <Calculadora/>
+};
+
+const pages = {
+    INTRO: 'intro',
+    CALCULADORA: 'calculadora'
+};
 
 export default function Screen(){
     const {isGreen} = usePower();
-    
+    const [page, setPage] = useState(pages.INTRO);
     
     if(true){
         
         return(
-            <>
                 <div className='screen'>
                     <div className='first-row'>
                         <div className='element'>GitHub</div>
@@ -41,16 +53,17 @@ export default function Screen(){
                             </a>
                         </button>
                     </div>
-                    <div className='intro'>
-                        <p className='console-animation '>
-                            Hey! My name is George. Welcome!
-                        </p>
+                    <div>{pagesComponets[page]}</div>
+                    <div style={{position: 'relative', top: '-50px'}}>
+                        <button onClick={() => {
+                            setPage(pages.INTRO)
+                        }}>Some web Page</button>
+                        <button onClick={() => {
+                            setPage(pages.CALCULADORA)
+                        }}>Some web Page 2</button>
+                    
                     </div>
-                    <div>This is where the work done will be</div>
                 </div>
-                
-            </>
-            
         );
     }
     return(
