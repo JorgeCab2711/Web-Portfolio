@@ -44,6 +44,7 @@ export default function PowerAssets(){
                     <div className='light' style={{backgroundColor: isGreen ? 'rgb(0, 255, 0)': 'green'}} ></div>
                     <div className='light' id={redState}></div>
                 </div>
+                
             </div>
     );
 }

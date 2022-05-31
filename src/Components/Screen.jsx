@@ -5,18 +5,24 @@ import gitHub from '../img/gitLogo.png';
 import linkLogo from '../img/LILogo.png';
 import IG from '../img/IGlogo.png';
 import disc from '../img/discordLogo.png';
-import MyRouter from './myRouter';
 import RenderIntro from './RenderIntro';
-import Calculadora from './Calculadora'
+import Calculadora from './Demo_Proyects/Calculadora/Calculadora'
+import HomeBtn from '../img/home.png';
+import file from '../img/file.png';
+import chat from '../img/chat.png';
+
+
 
 const pagesComponets = {
     intro:      <RenderIntro/>,
-    calculadora: <Calculadora/>
+    calculadora: <Calculadora/>,
+    chat: <iframe src='http://some-webpage.com/Laboratorios/lab5java/index.html'/>,
 };
 
 const pages = {
     INTRO: 'intro',
-    CALCULADORA: 'calculadora'
+    CALCULADORA: 'calculadora',
+    CHAT: 'chat',
 };
 
 export default function Screen(){
@@ -53,15 +59,30 @@ export default function Screen(){
                             </a>
                         </button>
                     </div>
-                    <div>{pagesComponets[page]}</div>
-                    <div style={{position: 'relative', top: '-50px'}}>
-                        <button onClick={() => {
+                    <div className="content">{pagesComponets[page]}</div>
+                    <div className='last-row-container'>
+                        <button className='last-row-btn' onClick={() => {
                             setPage(pages.INTRO)
-                        }}>Some web Page</button>
-                        <button onClick={() => {
-                            setPage(pages.CALCULADORA)
-                        }}>Some web Page 2</button>
-                    
+                        }}>
+                            <img className='logo' src={HomeBtn}/>
+                        </button>
+                        <div className='proyect-container'>
+                            <div className='header'>Proyects I've made</div>
+                            <div className='proyect'>
+                                <button className='last-row-btn' onClick={() => {
+                                    setPage(pages.CALCULADORA)}}>
+                                        <img className='logo' src={file}/>
+                                </button>
+                            </div>
+                            <div className='proyect'>
+                                <button className='last-row-btn' onClick={() => {
+                                    setPage(pages.CHAT)}}>
+                                        <img className='logo' src={chat}/>
+                                </button>
+                            </div>
+                            
+                        </div>
+                        
                     </div>
                 </div>
         );

@@ -7,7 +7,6 @@ function App() {
   return (
     <PowerProvider>
       <div className="overAllContainer">
-        <div></div>
         <Computer />
         <Monitor />
       </div>
