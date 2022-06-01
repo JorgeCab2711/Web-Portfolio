@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 /*Screen*/
+
+@media screen and (max-width: 1080px){
+    .screen{
+        height: 270px !important; 
+        width: 380px !important;
+    }
+    div{
+        font-size: 15px !important;
+    }
+    .logo{
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+
 .screen{
     display: grid;
     height: 89%;
@@ -149,8 +165,13 @@ iframe{
     width: 100%;
 }
 
+.download{
+    position: relative;
+    text-align: center;
+}
+
+
+
+
 /*End of last screen row*/
-
-
-
 /*End of Screen*/

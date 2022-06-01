@@ -105,5 +105,35 @@ $activeGreen: rgb(0, 255, 0);
 
 
 
-
+@media screen and (max-width: 1080px){
+    #alignment{
+        gap: 0px !important;
+        grid-template-rows: 53% 33% 33% !important;
+    }
+    .mainBtn{
+        height: 15px !important;
+        width: 15px !important;
+        &#powerButton{
+            height: 15px !important;
+            width: 4px !important;
+        }
+        &#resetButton{
+            height: 15px !important;
+            width: 10px !important;
+        }
+    }
+    .lightContainer{
+        height: 10px !important;
+        width: 3px;
+        border-radius: 100%;
+    }
+    #rImage{
+        height: 0px !important;
+        width: 0px !important;
+    }
+    #pImage{
+        height: 0px !important;
+        width: 0px !important;
+    }
+}
 

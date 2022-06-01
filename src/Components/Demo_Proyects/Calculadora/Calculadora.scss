@@ -7,14 +7,20 @@ $first-dark: #1e1e1e;
 $second-dark: #272727;
 $third-dark: #7b7b7b;
 
-
+@media screen and (max-width: 1080px){
+    .calculator-container{
+        grid-template-rows: 45px repeat(6,17px) !important;
+    }
+    .all-container{
+        gap: 0px !important;
+    }
+}
 
 .all-container{
     display: grid;
     text-align: center;
     font-family: $overallFont;
     align-items: center;
-    gap: 150px;
 }
 
 
@@ -26,7 +32,7 @@ $third-dark: #7b7b7b;
     font-family: inherit;
     background-color: $background-Color;
     height: 79%;
-    width: 200%;
+    width: 100%;
     justify-self: center;
     border-radius: 2%;
     overflow: hidden;

@@ -6,6 +6,7 @@ $shadow: #c0ac8d;
 
 /*End Color Palette*/
 
+
 .monitor-container{
     display: grid;
     place-items: center;
@@ -13,6 +14,23 @@ $shadow: #c0ac8d;
     width: 100%;
     height: 100%;
     
+}
+
+@media screen and (max-width: 1080px){
+    .monitor{
+        height: 325px !important;
+        width: 450px !important;
+    }
+    .arm{
+        position: relative;
+        height: 20px !important;
+        width: 110px !important;
+        left: 35% !important;
+    }
+    .stand{
+        height: 20px !important;
+        width: 80% !important;
+    }
 }
 
 .monitor{
