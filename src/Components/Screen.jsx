@@ -36,7 +36,7 @@ export default function Screen() {
   const { isGreen } = usePower();
   const [page, setPage] = useState(pages.INTRO);
 
-  if (true) {
+  if (isGreen) {
     return (
       <div className="screen">
         <div className="first-row">
