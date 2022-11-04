@@ -16,7 +16,6 @@ export default function PowerAssets() {
     if (redState !== 'redLightActive') {
       setRedState('redLightActive');
       setTimeout(() => {
-        console.log('waiting');
         setRedState('redLightInactive');
         window.location.reload();
       }, 3000);

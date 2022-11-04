@@ -68,10 +68,15 @@ export default function About() {
               -Context API
               <br />
               -AWS management
+              <br />
+              -EspressJS
+              <br />
+              -Socket.io
+              <br />
             </p>
           </div>
           <div className="description">
-            <div className="title">As a programer in general</div>
+            <div className="title">Programming in general</div>
             <p>
               -Java
               <br />
@@ -109,6 +114,8 @@ export default function About() {
               -VSCode
               <br />
               -VRoid Studio
+              <br />
+              -Unity
               <br />
             </p>
           </div>
