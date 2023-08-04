@@ -76,7 +76,7 @@ export default function Screen() {
             <img className="logo" src={HomeBtn} />
           </button>
           <div className="proyect-container">
-            <div className="header">Proyects I have made</div>
+            <div className="header">I have made</div>
             <div className="proyect">
               <button
                 className="last-row-btn"

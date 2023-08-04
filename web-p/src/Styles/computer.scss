@@ -1,0 +1,210 @@
+/*Color Palette*/
+$primary: rgb(231, 224, 209);
+$secondary: rgb(233,219,181);
+$shadow: #6b6149;
+
+/*End Color Palette*/
+
+@media screen and (max-width: 1080px){
+    .pc{
+        height: 300px !important;
+        width: 100px !important;
+        border: 5px solid black !important;
+
+    }
+    .inner-elements-container{
+        border: 1px solid black !important; 
+    }
+    .inner-element{
+        border: 1px solid black !important;
+    }
+    #headPhones{
+        height: 0 !important;
+        width: 0 !important;
+    }
+    #aux{
+        height: 0 !important;
+        width: 0 !important;
+    }
+    
+    #inner-left{
+        left: 16px !important;
+        height: 10px !important;
+        width: 10px !important;
+    }
+    
+    #inner-center{
+        left: 3px !important;
+        height: 14px !important;
+        width: 14px !important;
+    }
+    #inner-right{
+        left: -5px !important;
+        height: 10px !important;
+        width: 10px !important;
+    }
+    
+    #empty-outlet{
+        border-top: 1px solid black !important;
+    }
+    
+    
+}
+
+
+.pc-container{
+    display: grid;
+    place-items: center;
+    height: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.pc{
+    display: grid;
+    place-items: center;
+    height: 850px;
+    width: 300px;
+    background-color: $secondary;
+    border-radius: 4%;
+    border: 10px solid black;
+}
+
+/*Periferal elements*/
+.inner-elements-container{
+    display: grid;
+    grid-template-rows: 12.5% 12.5% 12.5% 12.5% 50%;
+    height: 93%;
+    width: 90%;
+    border: 5px solid black;;
+    border-top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.inner-element{
+    height: 100%;
+    width: 100%;
+    background-color: $secondary;
+    border: 4px solid black ;
+    border-left: 0;
+    border-right: 0;
+}
+
+.periferal-container{
+    display: grid;
+    grid-template-rows: 60% 40%;
+    background-color: $primary;
+    place-items: center;
+
+}
+
+.disc-player{
+    width: 80%;
+    height: 40%;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+}
+
+.inner-player{
+    width: 90%;
+    height: 30%;
+    border: 1.5px solid black;
+    border-radius: inherit;
+}
+
+
+
+.pItem-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: inherit;
+    width: 100%;
+}
+
+.aux-Container{
+    display: grid;
+    place-items: center;
+    grid-template-rows: 50% 50%;
+}
+
+#headPhones{
+    height: 70%;
+    width: 12%;
+    align-self: center;
+    justify-self: center;
+}
+
+#aux{
+    position : relative;
+    bottom: 15%;
+    height: 50%;
+    width: 8%;
+    background-color: black;
+    border-radius: 100%;
+}
+
+
+/*End Periferal elements*/
+
+/*Last element*/
+
+
+#last-element{
+    display: grid;
+    place-items: center;
+    grid-template-rows: 40% 60%;
+}
+
+.memory-container{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: 60%;
+    width: 70%;
+    border: 2px solid black;
+}
+
+.memory-outlet{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    background-color: $primary;
+}
+
+#inner-left{
+    position : relative;
+    align-self: center;
+    left: 70%;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+}
+
+#inner-center{
+    position: relative;
+    justify-content: center;
+    align-self: center;
+    height: 30px;
+    width: 100%;
+    background-color: black;
+}
+#inner-right{
+    position : relative;
+    align-self: center;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+}
+
+#empty-outlet{
+    border-top: 2px solid black;
+}
+
+
+
+
+
+
+
+/*Last element end*/
